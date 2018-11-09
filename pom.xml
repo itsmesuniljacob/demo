@@ -22,6 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<jacoco.version>0.7.5.201505241946</jacoco.version>
 	</properties>
 
 	<dependencies>
@@ -35,6 +36,36 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.togglz</groupId>
+			<artifactId>togglz-spring-boot-starter</artifactId>
+			<version>2.6.1.Final</version>
+		</dependency>
+
+		<!-- Togglz Admin Console (optional) -->
+		<dependency>
+			<groupId>org.togglz</groupId>
+			<artifactId>togglz-console</artifactId>
+			<version>2.6.1.Final</version>
+		</dependency>
+
+		<!-- Togglz Spring Security (optional) -->
+		<dependency>
+			<groupId>org.togglz</groupId>
+			<artifactId>togglz-spring-security</artifactId>
+			<version>2.6.1.Final</version>
+		</dependency>
+
+		<!-- Togglz testing support -->
+		<dependency>
+			<groupId>org.togglz</groupId>
+			<artifactId>togglz-testing</artifactId>
+			<version>2.6.1.Final</version>
+			<scope>test</scope>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
@@ -43,6 +74,30 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.version}</version>
+                <configuration>
+                    <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
+                    <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>jacoco-initialize</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>jacoco-site</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 

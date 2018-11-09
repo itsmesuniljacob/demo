@@ -5,8 +5,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
+
+//    private FeatureManager featureManager;
+//
+//    public HelloController(FeatureManager featureManager) {
+//        this.featureManager = featureManager;
+//    }
+
     @RequestMapping("/hello")
     public String greetingPhilips() {
-        return "Hello Philips";
+
+        if(FeatureToggles.FEATURE_ONE.isActive()) {
+            return "Hello Philips";
+        }
+        return "Hello Philips Innovation Campus";
     }
 }

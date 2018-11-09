@@ -1,0 +1,6 @@
+togglz:
+  features:
+    FEATURE_ONE:
+      enabled: false
+    FEATURE_TWO:
+      enabled: true
