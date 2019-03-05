@@ -6,7 +6,7 @@ addons:
   sonarcloud:
     organization: "xylene1980-github"
     token:
-      secure: 4f36b1241e15462106e10e7e4bcccbe912276d33
+      secure: $SONAR_TOKEN
 script:
 #  - mvn clean package
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
