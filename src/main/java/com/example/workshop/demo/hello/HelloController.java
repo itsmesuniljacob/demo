@@ -15,9 +15,9 @@ public class HelloController {
     @RequestMapping("/hello")
     public String greetingPhilips() {
 
-        if(FeatureToggles.FEATURE_ONE.isActive()) {
-            return "Hello Philips";
-        }
-        return "Hello Philips Innovation Campus";
+//        if(FeatureToggles.FEATURE_ONE.isActive()) {
+//            return "Hello Philips";
+//        }
+        return "Hello Philips";
     }
 }

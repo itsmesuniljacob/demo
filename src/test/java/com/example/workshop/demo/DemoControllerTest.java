@@ -1,6 +1,5 @@
 package com.example.workshop.demo;
 
-import com.example.workshop.demo.hello.FeatureToggles;
 import com.example.workshop.demo.hello.HelloController;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,11 +31,11 @@ public class DemoControllerTest {
     @Test
     public void testHello() throws Exception {
 
-        if(FeatureToggles.FEATURE_ONE.isActive()) {
-            mockMvc.perform(get("/hello"))
-                    .andExpect(status().isOk())
-                    .andExpect(content().string("Hello Philips"));
-        }
+//        if(FeatureToggles.FEATURE_ONE.isActive()) {
+//            mockMvc.perform(get("/hello"))
+//                    .andExpect(status().isOk())
+//                    .andExpect(content().string("Hello Philips"));
+//        }
         mockMvc.perform(get("/hello"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Hello Philips"));
