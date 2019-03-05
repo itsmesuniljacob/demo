@@ -1,6 +1,5 @@
 # Compiled class file
 *.class
-
 # Log file
 *.log
 
@@ -25,8 +24,10 @@ hs_err_pid*
 **/.idea/workspace.xml
 **/.idea/tasks.xml
 **/.idea/dictionaries
+**/.idea/misc.xml
 **/.idea/vcs.xml
 **/.idea/jsLibraryMappings.xml
+**/.idea/
 
 # Sensitive or high-churn files:
 **/.idea/dataSources.ids
