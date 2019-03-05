@@ -4,7 +4,7 @@ jdk:
   - oraclejdk8
 addons:
   sonarcloud:
-    organization: "demo"
+    organization: "xylene1980-github"
     token:
       secure: 4f36b1241e15462106e10e7e4bcccbe912276d33
 script:
