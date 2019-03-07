@@ -5,7 +5,7 @@ coverage:
   status:
     project:
       default:
-         target: 50%
+         target: 30%
 codecov:
   notify:
     require_ci_to_pass: yes
