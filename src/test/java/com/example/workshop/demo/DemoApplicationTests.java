@@ -14,4 +14,14 @@ public class DemoApplicationTests {
 	public void contextLoads() {
 	}
 
+	@Test
+	public void test()
+	{
+		DemoApplication.main(new String[]{
+				"--spring.main.web-environment=false",
+				"--spring.autoconfigure.exclude=configure",
+				// Override any other environment properties according to your needs
+		});
+	}
+
 }

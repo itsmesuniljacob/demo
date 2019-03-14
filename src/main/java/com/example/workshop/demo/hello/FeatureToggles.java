@@ -6,6 +6,7 @@ import org.togglz.core.context.FeatureContext;
 
 public enum FeatureToggles implements Feature {
 
+
     //@EnabledByDefault
     @Label("First Feature")
     FEATURE_ONE,

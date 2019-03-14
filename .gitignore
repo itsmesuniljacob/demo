@@ -39,7 +39,8 @@ hs_err_pid*
 
 ## File-based project format:
 *.iws
-
+**/.scannerwork/
 # IntelliJ
 /out/
 **/target/
+demo.iml
