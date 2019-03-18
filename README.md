@@ -1,5 +1,8 @@
 ## DevOps CI Pipeline
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=com.example.workshop%3Ademo&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.example.workshop%3Ademo)
+[![codecov](https://codecov.io/gh/xylene1980/demo/branch/master/graph/badge.svg)](https://codecov.io/gh/xylene1980/demo)
+
 The objective of this repo is to demonstrate a role model pipeline for continuous integration. Continuous
 integration is a practice where developers are required to integrate code into a shared repository
 several times a day. While developers integrate code in shared repository, there should some quality
